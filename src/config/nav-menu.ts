@@ -2,107 +2,86 @@ import type { NavMenuConfig } from "@/types";
 
 export const navMenuConfig: NavMenuConfig = {
   pagesNav: [
+    
+  
+    
     {
-      title: "Pages",
+      title: "Ecosistema",
       items: [
         {
-          title: "Landing",
-          href: "/landing",
-          description: "A landing page template with differents sections.",
-          image: "/images/examples/landing.jpg",
+          title: "Proyectos",
+          href: "/projects",
+          description: "Descubre los proyectos y DAO's del ecosistema DeSci.",
+          // Puedes agregar una imagen aquí si deseas
         },
         {
-          title: "Changelog",
-          href: "/releases",
-          description: "A reproduction of Starlog template with Tailwind CSS.",
-          image: "/images/examples/changelog.jpg",
+          title: "Eventos",
+          href: "/events",
+          description: "Explora los eventos y actividades",
+          // Puedes agregar una imagen aquí si deseas
         },
         {
-          title: "Waitlist",
-          href: "/waitlist",
-          description:
-            "A waitlist form using Astro DB, React Hook Form & Sonner. Static page.",
-          image: "/images/examples/waitlist.jpg",
-          forceReload: true,
+          title: "Recursos",
+          href: "/resources",
+          description: "Accede a recursos útiles para la comunidad.",
+          // Puedes agregar una imagen aquí si deseas
         },
         {
-          title: "Pricing",
-          href: "/pricing",
-          description: "Pricing cards, FAQs and more content with price.",
-          image: "/images/examples/pricing.jpg",
+          title: "Otras comunidades",
+          href: "/comunidades",
+          description: "Encuentra otras comunidades DeSci.",
+          // Puedes agregar una imagen aquí si deseas
         },
-        {
-          title: "About",
-          href: "/about",
-          description: "A simple page with a masonry gallery and little text.",
-          image: "/images/examples/about.jpg",
-        },
-        {
-          title: "Newsletter",
-          href: "/newsletter",
-          description:
-            "A newsletter form using Astro DB & Simple Stack Form. Counter display!",
-          image: "/images/examples/newsletter.jpg",
-        },
+      
       ],
     },
   ],
   examplesNav: [
     {
-      title: "Examples",
+      title: "Comunidad",
       items: [
         {
-          title: "Static Blog",
-          href: "/blog",
-          description: "A Markdown/MDX blog built using Content Collections.",
-          image: "/images/examples/static-blog.jpg",
+          title: "Nosotros",
+          href: "/about-us",
+          description: "Conoce más sobre DeSci LATAM y nuestro equipo.",
+          // Puedes agregar una imagen aquí si deseas
         },
         {
-          title: "Docs",
-          href: "/docs/getting-started",
-          description:
-            "A Markdown/MDX docs site built using Content Collections.",
-          image: "/images/examples/documentation.jpg",
+          title: "Changelog",
+          href: "/changelog",
+          description: "Mira los cambios y actualizaciones recientes.",
+          // Puedes agregar una imagen aquí si deseas
         },
         {
-          title: "Anime List",
-          href: "/animes",
-          description:
-            "Fetch anime content from an graphql endpoint. Tabs component.",
-          image: "/images/examples/animes.jpg",
-          launched: true,
+          title: "Contribuidores",
+          href: "/contributors",
+          description: "¿Interesado en colaborar? Conoce cómo puedes involucrarte y contribuir",
+          // Puedes agregar una imagen aquí si deseas
         },
         {
-          title: "Blog DB",
-          href: "/blog-db",
-          description:
-            "Blog built using Astro DB. With categories, views & likes.",
-          // image: "/images/examples/blog-db.jpg",
-          disabled: true,
+          title: "Roadmap",
+          href: "/roadmap",
+          description: "Explora nuestro plan de desarrollo y objetivos futuros.",
+          // Puedes agregar una imagen aquí si deseas
         },
         {
-          title: "Ecommerce",
-          href: "/products",
-          disabled: true,
-          description: "Ecommerce pages fetching data from an API.",
-          // image: "/images/examples/ecommerce.jpg",
-        },
-        {
-          title: "Authentification",
-          href: "/auth",
-          description: "Implement an authentification using Astro DB & Lucia",
-          // image: "/images/examples/auth.jpg",
-          disabled: true,
+          title: "Donaciones",
+          href: "/donations",
+          description: "Si te gusta nuestro trabajo, podes apoyarnos con una donación.",
+          // Puedes agregar una imagen aquí si deseas
         },
       ],
     },
   ],
+  
+  
+  
   links: [
-    // {
-    //   title: "Example",
-    //   href: "/example",
-    //   description: "Example description",
-    //   image: "/images/examples/image.jpg",
-    // },
+    {
+      title: "Blog",
+      href: "/blog",
+      description: "Explora nuestros artículos y publicaciones.",
+      // Puedes agregar una imagen aquí si deseas
+    },
   ],
 };
