@@ -1,7 +1,7 @@
 import { getCollection } from "astro:content";
 
-export async function getCategories() {
-  const posts = await getCollection("blog");
+export async function getCategories(collection = "blog") {
+  const posts = await getCollection(collection);
   const categories = [
     ...new Set(posts.map((post) => post.data.category).flat()),
   ];
@@ -9,16 +9,16 @@ export async function getCategories() {
   return categories;
 }
 
-export async function getPosts() {
-  const posts = (await getCollection("blog")).sort(
+export async function getPosts(collection = "blog") {
+  const posts = (await getCollection(collection)).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
   );
 
   return posts;
 }
 
-export async function getPostsByCategory(category: string) {
-  const posts = (await getCollection("blog"))
+export async function getPostsByCategory(category: string, collection = "blog") {
+  const posts = (await getCollection(collection))
     .filter((post) => post.data.category.includes(category))
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
