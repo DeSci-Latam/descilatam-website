@@ -9,6 +9,9 @@ type Props = {
 };
 
 const { className } = Astro.props;
+
+const { currentLocale } = Astro;
+console.log ({currentLocale});
 ---
 
 <header
@@ -38,7 +41,7 @@ const { className } = Astro.props;
       class="absolute top-1/2 left-1/2 -translate-x-4 -translate-y-4 md:hidden"
     >
       <a href="/" aria-label="Astronomy homepage">
-        <Icon name="stars-outline" class="size-8" />
+        <Logo />
       </a>
     </div>
 

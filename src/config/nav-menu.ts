@@ -3,33 +3,32 @@ import type { NavMenuConfig } from "@/types";
 export const navMenuConfig: NavMenuConfig = {
   pagesNav: [
     
-  
-    
     {
       title: "Ecosistema",
       items: [
         {
           title: "Proyectos",
-          href: "/projects",
+          href: "projects",
           description: "Descubre los proyectos y DAO's del ecosistema DeSci.",
-          // Puedes agregar una imagen aquí si deseas
+          image: "/images/examples/landing.jpg",
         },
         {
           title: "Eventos",
-          href: "/events",
-          description: "Explora los eventos y actividades",
-          // Puedes agregar una imagen aquí si deseas
+          href: "events",
+          description: "Explora los eventos y actividades relacionadas.",
+          image: "/images/examples/changelog.jpg",
         },
         {
           title: "Recursos",
-          href: "/resources",
+          href: "resources",
           description: "Accede a recursos útiles para la comunidad.",
-          // Puedes agregar una imagen aquí si deseas
+          image: "/images/examples/waitlist.jpg",
+          forceReload: true,
         },
         {
-          title: "Otras comunidades",
-          href: "/comunidades",
-          description: "Encuentra otras comunidades DeSci.",
+          title: "Comunidades",
+          href: "comunidades",
+          description: "Encuentra y participa de otras comunidades DeSci.",
           // Puedes agregar una imagen aquí si deseas
         },
       
@@ -42,33 +41,33 @@ export const navMenuConfig: NavMenuConfig = {
       items: [
         {
           title: "Nosotros",
-          href: "/about-us",
+          href: "about-us",
           description: "Conoce más sobre DeSci LATAM y nuestro equipo.",
-          // Puedes agregar una imagen aquí si deseas
+          
         },
         {
           title: "Changelog",
-          href: "/changelog",
+          href: "changelog",
           description: "Mira los cambios y actualizaciones recientes.",
-          // Puedes agregar una imagen aquí si deseas
+          
         },
         {
           title: "Contribuidores",
-          href: "/contributors",
-          description: "¿Interesado en colaborar? Conoce cómo puedes involucrarte y contribuir",
-          // Puedes agregar una imagen aquí si deseas
+          href: "contributors",
+          description: "¿Interesado en colaborar? Conoce cómo puedes involucrarte.",
+         
         },
         {
           title: "Roadmap",
-          href: "/roadmap",
+          href: "roadmap",
           description: "Explora nuestro plan de desarrollo y objetivos futuros.",
-          // Puedes agregar una imagen aquí si deseas
+         
         },
         {
           title: "Donaciones",
-          href: "/donations",
+          href: "donations",
           description: "Si te gusta nuestro trabajo, podes apoyarnos con una donación.",
-          // Puedes agregar una imagen aquí si deseas
+          
         },
       ],
     },
@@ -79,9 +78,8 @@ export const navMenuConfig: NavMenuConfig = {
   links: [
     {
       title: "Blog",
-      href: "/blog",
+      href: "blog",
       description: "Explora nuestros artículos y publicaciones.",
-      // Puedes agregar una imagen aquí si deseas
     },
   ],
 };

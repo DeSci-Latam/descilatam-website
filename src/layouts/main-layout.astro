@@ -12,6 +12,8 @@ import { Icon } from "astro-icon/components";
 // import { marketingConfig } from "@/config/marketing";
 // import MainNav from "@/components/layout/main-nav.astro";
 
+
+
 type Props = {
   title: string;
   description?: string;
@@ -19,6 +21,8 @@ type Props = {
 };
 
 const { title, description, mainClass } = Astro.props;
+
+
 ---
 
 <BaseLayout title={title} description={description}>
@@ -44,14 +48,18 @@ const { title, description, mainClass } = Astro.props;
     />
 
     <div class="flex items-center gap-x-4" slot="right-header">
-      <a
+      <!-- <a
         href={siteConfig.links.github}
         target="_blank"
         rel="noreferrer"
         aria-label="github"
       >
         <Icon name="github" class="size-[22px]" />
-      </a>
+      </a> -->
+      
+      
+        
+
       <ThemeToggle client:load />
     </div>
   </Header>
@@ -62,3 +70,4 @@ const { title, description, mainClass } = Astro.props;
 
   <Footer />
 </BaseLayout>
+
