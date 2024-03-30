@@ -1,12 +1,12 @@
 ---
 import BlogHeader from "@/components/blog-header.astro";
-import BlogCard from "@/components/cards/blog-card.astro";
+import EventsCard from "@/components/cards/events-card.astro";
 import MainLayout from "@/layouts/main-layout.astro";
 import { capitalizer } from "@/lib/utils";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection('projects');
+  const allPosts = await getCollection('events');
   const uniqueCategories = [
     ...new Set(allPosts.map((post) => post.data.category).flat()),
   ];
@@ -27,16 +27,16 @@ const { posts } = Astro.props;
 ---
 
 <MainLayout
-  title={`${capitalizer(category)} | Projects`}
+  title={`${capitalizer(category)} | Events`}
   description={`All posts for ${category} category`}
 >
   <section class="container py-10">
-    <BlogHeader title={`Posts by ${category} category`} type="projects" />
+    <BlogHeader title={`Posts by ${category} category`} type="events" />
 
     <div
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-9 md:gap-y-16 lg:gap-x-8"
     >
-      {posts.map((post) => <BlogCard {...post} />)}
+      {posts.map((post) => <EventsCard {...post} />)}
     </div>
   </section>
 </MainLayout>

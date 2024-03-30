@@ -18,6 +18,7 @@ const links = navMenuConfig.links;
 const pages = navMenuConfig.pagesNav[0];
 const examples = navMenuConfig.examplesNav[0];
 
+
 export function MainNavigationMenu() {
   return (
     <NavigationMenu>
@@ -71,8 +72,6 @@ export function MainNavigationMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-       
-        
         {links ? (
           <NavigationMenuItem>
             {links.map((link) => (
