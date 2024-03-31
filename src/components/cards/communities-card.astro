@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/utils";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
-type CollectionEntryType =   "events";
+type CollectionEntryType =   "communities";
 
 type Props = CollectionEntry<CollectionEntryType> & {
   type?: CollectionEntryType;
@@ -15,7 +15,7 @@ const post = Astro.props;
 
 <article class="group space-y-4">
   <a
-    href={`/${Astro.currentLocale}/${post.type ?? "events"}/${post.slug}/`}
+    href={`/${Astro.currentLocale}/${post.type ?? "communities"}/${post.slug}/`}
     class="flex h-52 group-hover:-translate-y-2 group-hover:shadow-xl transition duration-300"
   >
     <Image
@@ -31,7 +31,7 @@ const post = Astro.props;
 
   <div class="flex items-center justify-between">
     <a
-      href={`/${Astro.currentLocale}/${post.type ?? "events"}/category/${post.data.category}`}
+      href={`/${Astro.currentLocale}/${post.type ?? "communities"}/category/${post.data.category}`}
       transition:name={"badge-cat-" + post.slug}
     >
       <Badge radius="md" className="capitalize">
@@ -48,7 +48,7 @@ const post = Astro.props;
   </div>
 
   <div>
-    <a href={`/${Astro.currentLocale}/${post.type ?? "events"}/${post.slug}/`} class="group-hover:underline">
+    <a href={`/${Astro.currentLocale}/${post.type ?? "communities"}/${post.slug}/`} class="group-hover:underline">
       <h2
         class="font-heading text-xl md:text-2xl leading-snug line-clamp-3"
         transition:name={"title-" + post.slug}
