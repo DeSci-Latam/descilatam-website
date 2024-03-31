@@ -4,7 +4,7 @@ export const Astro = {
 
 function obtenerLocale(): string {
   // Lógica para obtener el locale desde localStorage, cookies, u otra fuente
-  return 'es'; // Por ejemplo, devolver 'es' como valor predeterminado
+  return 'es-AR'; // Por ejemplo, devolver 'es' como valor predeterminado
 }
 
 console.log("Current Locale:", Astro.currentLocale); // Para verificar que se establezca correctamente

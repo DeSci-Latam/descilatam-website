@@ -1,11 +1,13 @@
 // import { User } from "@prisma/client"
 
 export type NavItem = {
+
   title: string;
   href: string;
   disabled?: boolean;
 };
 export type MenuItem = NavItem & {
+
   image?: string;
   description?: string;
   launched?: boolean;
@@ -16,6 +18,7 @@ export type MenuItem = NavItem & {
 export type MainNavItem = NavItem;
 
 export type SidebarNavItem = {
+
   title: string;
   disabled?: boolean;
   external?: boolean;

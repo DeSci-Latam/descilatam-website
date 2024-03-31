@@ -18,6 +18,10 @@ const links = navMenuConfig.links;
 const pages = navMenuConfig.pagesNav[0];
 const examples = navMenuConfig.examplesNav[0];
 
+import { ui } from "@/i18n/ui";
+import { Astro } from '@/i18n/locate';
+const currentLanguage = Astro.currentLocale;
+
 
 export function MainNavigationMenu() {
   return (
