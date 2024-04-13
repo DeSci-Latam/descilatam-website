@@ -31,6 +31,7 @@ export const navMenuConfig: NavMenuConfig = {
           title: "Comunidades",
           href: "communities",
           description: "Encuentra y participa de otras comunidades DeSci.",
+          disabled: true,
           // Puedes agregar una imagen aquí si deseas
         },
       
@@ -53,12 +54,12 @@ export const navMenuConfig: NavMenuConfig = {
           description: "Mira los cambios y actualizaciones recientes.",
           
         },
-        {
+       /*  {
           title: "Contribuidores",
           href: "contributors",
           description: "¿Interesado en colaborar? Conoce cómo puedes involucrarte.",
           disabled: true,
-        },
+        }, */
         {
           title: "Roadmap",
           href: "roadmap",
