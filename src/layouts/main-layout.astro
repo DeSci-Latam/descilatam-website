@@ -1,5 +1,6 @@
 ---
 import Footer from "@/components/layout/footer.astro";
+import Topbar from "@/components/layout/topbar.astro";
 import Header from "@/components/layout/header.astro";
 import { MainNavigationMenu } from "@/components/main-navigation-menu";
 import { cn } from "@/lib/utils";
@@ -26,6 +27,7 @@ const { title, description, mainClass } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>
+  
   <Header className="border-b">
     <!-- if using only normals links  -->
     <!-- <MainNav items={marketingConfig.mainNav} slot="left-header" />
