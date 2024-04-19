@@ -17,6 +17,7 @@ export const navMenuConfig: NavMenuConfig = {
           href: "events",
           description: "Explora los eventos y actividades relacionadas.",
           image: "/images/examples/changelog.jpg",
+          disabled: true,
         },
         {
           title: "Recursos",
@@ -24,10 +25,11 @@ export const navMenuConfig: NavMenuConfig = {
           description: "Accede a recursos útiles para la comunidad.",
           image: "/images/examples/waitlist.jpg",
           forceReload: true,
+          disabled: true,
         },
         {
           title: "Comunidades",
-          href: "comunidades",
+          href: "communities",
           description: "Encuentra y participa de otras comunidades DeSci.",
           // Puedes agregar una imagen aquí si deseas
         },
@@ -55,13 +57,13 @@ export const navMenuConfig: NavMenuConfig = {
           title: "Contribuidores",
           href: "contributors",
           description: "¿Interesado en colaborar? Conoce cómo puedes involucrarte.",
-         
+          disabled: true,
         },
         {
           title: "Roadmap",
           href: "roadmap",
           description: "Explora nuestro plan de desarrollo y objetivos futuros.",
-         
+          disabled: true,
         },
         {
           title: "Donaciones",

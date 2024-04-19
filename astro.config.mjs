@@ -11,6 +11,7 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://descilatam.org",
+  
   integrations: [
     mdx({
       syntaxHighlight: "shiki",
@@ -32,18 +33,13 @@ export default defineConfig({
   adapter: vercel({
     analytics: true,
   }),
-  /* i18n: {
-    defaultLocale: "es-AR",
-    locales: ["es-AR", "pt-BR", "en-US"],
-    routing: {
-      prefixDefaultLocale: true
-    }
-  } */
+ 
   i18n: {
     defaultLocale: "es-AR",
     locales: ["es-AR", "pt-BR", "en-US"],
     routing: {
       prefixDefaultLocale: true
-    }
   }
+  },
+ 
 });

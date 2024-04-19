@@ -1,21 +1,11 @@
 ---
-title: "First Post"
+title: "Test 1"
 description: "Embark on a web development adventure with our inaugural post, diving deep into industry insights and emerging trends."
 pubDate: "Jul 08 2022"
 cover: "/images/blog/placeholder-3.jpg"
 category: "design"
+token: "ATH"
 ---
-
-<blockquote class="twitter-tweet" data-theme="dark">
-    <p lang="en" dir="ltr">
-        Finally a couple of wind and big wave days again. Itâ€™s been too long!
-        <a href="https://t.co/z2kLC9G6IL">pic.twitter.com/z2kLC9G6IL</a>
-    </p>
-    &mdash; Rick Strahl (@RickStrahl) 
-    <a href="https://twitter.com/RickStrahl/status/1471368532294201344?ref_src=twsrc%5Etfw">December 16, 2021</a>
-</blockquote> 
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
 
