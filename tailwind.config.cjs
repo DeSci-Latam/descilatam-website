@@ -11,11 +11,14 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
-    },
+    },  
     extend: {
       fontFamily: {
-        sans: ["Inter", ...fontFamily.sans],
-        heading: ["CalSans Semibold", ...fontFamily.sans],
+        heading: ["Suisse", ...fontFamily.sans],
+        parraf: ["Suisse", ...fontFamily.sans],
+        sans: ["Suisse", ...fontFamily.sans],
+       /*  heading: ["CalSans Semibold", ...fontFamily.sans], */
+        
       },
       height: {
         18: "4.5rem",

@@ -4,11 +4,13 @@ import { formatDate } from "@/lib/utils";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
-type CollectionEntryType =  "blog";
+ type CollectionEntryType =  "blog";
 
 type Props = CollectionEntry<CollectionEntryType> & {
   type?: CollectionEntryType;
-};
+}; 
+
+/* type Props = CollectionEntry<"blog">; */
 
 const post = Astro.props;
 ---

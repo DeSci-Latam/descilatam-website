@@ -11,6 +11,7 @@ export const navMenuConfig: NavMenuConfig = {
           href: "projects",
           description: "Descubre los proyectos y DAO's del ecosistema DeSci.",
           image: "/images/examples/landing.jpg",
+          disabled: true,
         },
         {
           title: "Eventos",
@@ -31,6 +32,7 @@ export const navMenuConfig: NavMenuConfig = {
           title: "Comunidades",
           href: "communities",
           description: "Encuentra y participa de otras comunidades DeSci.",
+          disabled: true,
           // Puedes agregar una imagen aquí si deseas
         },
       
@@ -45,20 +47,20 @@ export const navMenuConfig: NavMenuConfig = {
           title: "Nosotros",
           href: "about-us",
           description: "Conoce más sobre DeSci LATAM y nuestro equipo.",
-          
+          disabled: true,
         },
         {
           title: "Changelog",
           href: "changelog",
           description: "Mira los cambios y actualizaciones recientes.",
-          
+          disabled: true,
         },
-        {
+       /*  {
           title: "Contribuidores",
           href: "contributors",
           description: "¿Interesado en colaborar? Conoce cómo puedes involucrarte.",
           disabled: true,
-        },
+        }, */
         {
           title: "Roadmap",
           href: "roadmap",
@@ -69,7 +71,7 @@ export const navMenuConfig: NavMenuConfig = {
           title: "Donaciones",
           href: "donations",
           description: "Si te gusta nuestro trabajo, podes apoyarnos con una donación.",
-          
+          disabled: true,
         },
       ],
     },
