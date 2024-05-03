@@ -84,6 +84,7 @@ export const navMenuConfig: NavMenuConfig = {
       title: "Blog",
       href: "blog",
       description: "Explora nuestros artículos y publicaciones.",
+      disabled: false,
     },
   ],
 };
