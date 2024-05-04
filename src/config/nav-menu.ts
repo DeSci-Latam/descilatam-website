@@ -53,7 +53,7 @@ export const navMenuConfig: NavMenuConfig = {
           title: "Changelog",
           href: "changelog",
           description: "Mira los cambios y actualizaciones recientes.",
-          disabled: true,
+          disabled: false,
         },
        /*  {
           title: "Contribuidores",
