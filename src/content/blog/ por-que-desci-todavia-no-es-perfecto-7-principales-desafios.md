@@ -2,7 +2,7 @@
 title: "¿Por qué DeSci todavía no es perfecto? 7 principales desafíos"
 description: "Explorando los desafíos que enfrenta la Ciencia Descentralizada (DeSci) en su camino hacia la perfección y la transformación del panorama científico."
 pubDate: "15 Jul 2022"
-cover: "/images/blog/placeholder-2.jpg"
+cover: "/images/blog/6.jpg"
 category: "DeSci"
 ---
 # ¿Por qué DeSci todavía no es perfecto? 7 principales desafíos
