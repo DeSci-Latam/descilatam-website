@@ -2,7 +2,7 @@
 title: "La Ciencia Abierta y DeSci: Mismo objetivo, diferentes medios"
 description: "Explora cómo DeSci, la Ciencia Descentralizada, aborda los problemas de la Ciencia Abierta y cómo la tecnología blockchain y la Web3 pueden revolucionar la investigación científica."
 pubDate: "28 Sep 2023"
-cover: "/images/blog/open-science/ciencia-abierta-desci.jpg"
+cover: "/images/blog/3.png"
 category: "Open Science"
 ---
 

@@ -2,7 +2,7 @@
 title: "Cómo evaluar una DAO si deseas participar"
 description: "Una guía para evaluar si debes unirte a una Organización Autónoma Descentralizada (DAO)"
 pubDate: "15 Jul 2022"
-cover: "/images/blog/placeholder-2.jpg"
+cover: "/images/blog/1.jpg"
 category: "DAO"
 ---
 

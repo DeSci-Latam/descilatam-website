@@ -3,7 +3,7 @@ title: "¿De qué está hecho DeSci? Ocho preguntas simples para aclararlo para 
 description: "Descubre qué es DeSci y cómo funciona este movimiento en la ciencia que busca resolver los problemas actuales, facilitando el acceso a la investigación, la revisión por pares, el financiamiento a través de la tecnología blockchain, y mucho más.
 "
 pubDate: "15 Jul 2022"
-cover: "/images/blog/placeholder-2.jpg"
+cover: "/images/blog/5.jpg"
 category: "DeSci"
 ---
 
