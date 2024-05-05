@@ -8,21 +8,21 @@ export const navMenuConfig: NavMenuConfig = {
       items: [
         {
           title: "Proyectos",
-          href: "projects",
+          href: "/projects",
           description: "Descubre los proyectos y DAO's del ecosistema DeSci.",
           image: "/images/examples/landing.jpg",
           disabled: true,
         },
         {
           title: "Eventos",
-          href: "events",
+          href: "/events",
           description: "Explora los eventos y actividades relacionadas.",
           image: "/images/examples/changelog.jpg",
           disabled: true,
         },
         {
           title: "Recursos",
-          href: "resources",
+          href: "/resources",
           description: "Accede a recursos útiles para la comunidad.",
           image: "/images/examples/waitlist.jpg",
           forceReload: true,
@@ -30,7 +30,7 @@ export const navMenuConfig: NavMenuConfig = {
         },
         {
           title: "Comunidades",
-          href: "communities",
+          href: "/communities",
           description: "Encuentra y participa de otras comunidades DeSci.",
           disabled: true,
           // Puedes agregar una imagen aquí si deseas
@@ -45,13 +45,13 @@ export const navMenuConfig: NavMenuConfig = {
       items: [
         {
           title: "Nosotros",
-          href: "about-us",
+          href: "/about-us",
           description: "Conoce más sobre DeSci LATAM y nuestro equipo.",
           disabled: true,
         },
         {
           title: "Changelog",
-          href: "changelog",
+          href: "/changelog",
           description: "Mira los cambios y actualizaciones recientes.",
           disabled: false,
         },
@@ -63,13 +63,13 @@ export const navMenuConfig: NavMenuConfig = {
         }, */
         {
           title: "Roadmap",
-          href: "roadmap",
+          href: "/roadmap",
           description: "Explora nuestro plan de desarrollo y objetivos futuros.",
           disabled: true,
         },
         {
           title: "Donaciones",
-          href: "donations",
+          href: "/donations",
           description: "Si te gusta nuestro trabajo, podes apoyarnos con una donación.",
           disabled: true,
         },
@@ -82,7 +82,7 @@ export const navMenuConfig: NavMenuConfig = {
   links: [
     {
       title: "Blog",
-      href: "/es-AR/blog/",
+      href: "/blog",
       description: "Explora nuestros artículos y publicaciones.",
       disabled: false,
     },

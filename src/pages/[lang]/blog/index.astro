@@ -1,0 +1,61 @@
+---
+import { getBlogPosts } from "../../../content/config";
+import FormattedDate from "../../../components/FormattedDate.astro";
+import Layout from "../../../layouts/Layout.astro";
+import MainLayout from "@/layouts/main-layout.astro";
+import BlogHeader from "@/components/blog-header.astro";
+import BlogCard from "@/components/cards/blog-card.astro";
+import { getPosts } from "@/lib/fetchers";
+
+/* const posts = await getPosts(); */
+
+/* const { lang } = Astro.params; */
+
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+const lang = getLangFromUrl(Astro.url); 
+const t = useTranslations(lang);
+
+ const posts = (await getBlogPosts())
+  ?.filter((blog) => {
+    return blog?.data?.lang === lang;
+  })
+  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()); 
+
+export async function getStaticPaths() {
+  return ["en", "pt", "es"].map((lang) => {
+    return { params: { lang } };
+  });
+}
+
+const page = Astro.props;
+---
+
+<MainLayout title={t("site.title")} description={t("site.description")} lang={lang}>
+ 
+    <section class="container py-10">
+      <BlogHeader title="Blog" />
+      <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-9 md:gap-y-11 lg:gap-y-16 lg:gap-x-8"
+    >
+  <!--  <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <a href={`/${lang}/blog/${post.blog_slug}`}>
+              <img width={720} height={360} src={post.data.heroImage} alt="" />
+              <h4 class="title">{post.data.title}</h4>
+              <p class="date">
+                <FormattedDate date={post.data.pubDate} />
+              </p>
+            </a>
+          </li>
+        ))
+      }
+    </ul>  -->
+
+    {posts.map((post) => <BlogCard {...post} />)}
+   
+  
+  </div>
+  </section>
+</MainLayout>

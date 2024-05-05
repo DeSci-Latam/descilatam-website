@@ -10,8 +10,6 @@ type Props = {
 
 const { className } = Astro.props;
 
-const { currentLocale } = Astro;
-console.log ({currentLocale});
 ---
 <section class="bg-[#212739] text-primary w-full items-center text-center p-1 hover:cursor-pointer hover:text-white hover:underline hover:outline-1"><a href="https://explorer.gitcoin.co/#/round/42161/39/30" target="_blank">Ronda DeSci Activa en Gitcoin</a></section>
 <header
@@ -22,7 +20,7 @@ console.log ({currentLocale});
 >
   <div class="relative container flex items-center justify-between w-full">
     <div class="flex items-center gap-6 md:gap-8 lg:gap-10">
-      <a href={`/${Astro.currentLocale}/`} class="hidden items-center space-x-2 md:flex">
+      <a href="/" class="hidden items-center space-x-2 md:flex">
         <Logo />
         <span class="hidden font-bold sm:inline-block">
           {siteConfig.name}
@@ -40,7 +38,7 @@ console.log ({currentLocale});
     <div
       class="absolute top-1/2 left-1/2 -translate-x-4 -translate-y-4 md:hidden"
     >
-      <a href={`/${Astro.currentLocale}/`} aria-label="Astronomy homepage">
+      <a href="/" aria-label="homepage">
         <Logo />
       </a>
     </div>

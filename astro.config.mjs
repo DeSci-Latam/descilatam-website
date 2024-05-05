@@ -34,12 +34,12 @@ export default defineConfig({
     analytics: true,
   }),
  
-  i18n: {
+  /* i18n: {
     defaultLocale: "es-AR",
     locales: ["es-AR", "pt-BR", "en-US"],
     routing: {
       prefixDefaultLocale: true
   }
-  },
+  }, */
  
 });

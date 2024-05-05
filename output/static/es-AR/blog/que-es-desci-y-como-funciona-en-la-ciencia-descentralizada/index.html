@@ -1,0 +1,301 @@
+<!DOCTYPE html><html lang="es-AR" class="scroll-smooth"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.5.5"><!-- Font preloads --><link rel="preload" href="/fonts/calsans-semibold.woff2" as="font" type="font/woff2" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://descilatam.org/es-AR/blog/que-es-desci-y-como-funciona-en-la-ciencia-descentralizada/"><!-- Primary Meta Tags --><title>¿De qué está hecho DeSci? Ocho preguntas simples para aclararlo para los científicos | DeSci LATAM</title><meta name="title" content="¿De qué está hecho DeSci? Ocho preguntas simples para aclararlo para los científicos | Astronomy"><meta name="description" content="Descubre qué es DeSci y cómo funciona este movimiento en la ciencia que busca resolver los problemas actuales, facilitando el acceso a la investigación, la revisión por pares, el financiamiento a través de la tecnología blockchain, y mucho más."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://descilatam.org/es-AR/blog/que-es-desci-y-como-funciona-en-la-ciencia-descentralizada/"><meta property="og:title" content="¿De qué está hecho DeSci? Ocho preguntas simples para aclararlo para los científicos"><meta property="og:description" content="Descubre qué es DeSci y cómo funciona este movimiento en la ciencia que busca resolver los problemas actuales, facilitando el acceso a la investigación, la revisión por pares, el financiamiento a través de la tecnología blockchain, y mucho más."><meta property="og:image" content="https://descilatam.org/og.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://descilatam.org/es-AR/blog/que-es-desci-y-como-funciona-en-la-ciencia-descentralizada/"><meta property="twitter:title" content="¿De qué está hecho DeSci? Ocho preguntas simples para aclararlo para los científicos"><meta property="twitter:description" content="Descubre qué es DeSci y cómo funciona este movimiento en la ciencia que busca resolver los problemas actuales, facilitando el acceso a la investigación, la revisión por pares, el financiamiento a través de la tecnología blockchain, y mucho más."><meta property="twitter:image" content="https://descilatam.org/og.jpg"><!-- Dark mode with prevent flickering flash between navigations --><script>
+const setDarkMode = () => {
+  const theme = (() => {
+    if (
+      typeof localStorage !== "undefined" &&
+      localStorage.getItem("theme")
+    ) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
+  }
+  window.localStorage.setItem("theme", theme);
+};
+
+setDarkMode();
+document.addEventListener("astro:after-swap", setDarkMode);
+</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0}}@keyframes astroFadeOut{to{opacity:0}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style>
+<link rel="stylesheet" href="/_astro/login.YNHK2zmB.css" /><script type="module" src="/_astro/hoisted.sVqsyoFB.js"></script><style>[data-astro-transition-scope="astro-ks7i2azy-1"] { view-transition-name: astro-ks7i2azy-1; }@layer astro { ::view-transition-old(astro-ks7i2azy-1) { 
+	animation-duration: 90ms, 220ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both, both;
+	animation-name: astroFadeOut, astroSlideToLeft; }::view-transition-new(astro-ks7i2azy-1) { 
+	animation-duration: 210ms, 220ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-delay: 30ms;
+	animation-fill-mode: both, both;
+	animation-name: astroFadeIn, astroSlideFromRight; }[data-astro-transition=back]::view-transition-old(astro-ks7i2azy-1) { 
+	animation-name: astroFadeOut, astroSlideToRight; }[data-astro-transition=back]::view-transition-new(astro-ks7i2azy-1) { 
+	animation-name: astroFadeIn, astroSlideFromLeft; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-ks7i2azy-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-ks7i2azy-1"] { 
+	animation-duration: 90ms, 220ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both, both;
+	animation-name: astroFadeOut, astroSlideToLeft; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-ks7i2azy-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-ks7i2azy-1"] { 
+	animation-duration: 210ms, 220ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-delay: 30ms;
+	animation-fill-mode: both, both;
+	animation-name: astroFadeIn, astroSlideFromRight; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-ks7i2azy-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-ks7i2azy-1"] { 
+	animation-name: astroFadeOut, astroSlideToRight; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-ks7i2azy-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-ks7i2azy-1"] { 
+	animation-name: astroFadeIn, astroSlideFromLeft; }</style><style>[data-astro-transition-scope="astro-4rjw2hgd-2"] { view-transition-name: badge-cat-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada; }@layer astro { ::view-transition-old(badge-cat-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(badge-cat-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(badge-cat-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(badge-cat-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-4rjw2hgd-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-4rjw2hgd-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-4rjw2hgd-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-4rjw2hgd-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-4rjw2hgd-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-4rjw2hgd-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-4rjw2hgd-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-4rjw2hgd-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-3fmipmlo-3"] { view-transition-name: img-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada; }@layer astro { ::view-transition-old(img-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(img-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(img-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(img-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-3fmipmlo-3"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-3fmipmlo-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-3fmipmlo-3"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-3fmipmlo-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-3fmipmlo-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-3fmipmlo-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-3fmipmlo-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-3fmipmlo-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-5hio3otc-4"] { view-transition-name: date-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada; }@layer astro { ::view-transition-old(date-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(date-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(date-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(date-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-5hio3otc-4"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-5hio3otc-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-5hio3otc-4"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-5hio3otc-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-5hio3otc-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-5hio3otc-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-5hio3otc-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-5hio3otc-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-3mzj52bz-5"] { view-transition-name: title-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada; }@layer astro { ::view-transition-old(title-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(title-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(title-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(title-que-es-desci-y-como-funciona-en-la-ciencia-descentralizada) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-3mzj52bz-5"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-3mzj52bz-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-3mzj52bz-5"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-3mzj52bz-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-3mzj52bz-5"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-3mzj52bz-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-3mzj52bz-5"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-3mzj52bz-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body class="flex flex-col min-h-screen">  <section class="bg-[#212739] text-primary w-full items-center text-center p-1 hover:cursor-pointer hover:text-white hover:underline hover:outline-1"><a href="#" target="_blank">Ronda activa de Gitcoin, podes participar</a></section> <header class="flex items-center h-16 md:h-18 z-50 sticky top-0 bg-background border-b"> <div class="relative container flex items-center justify-between w-full"> <div class="flex items-center gap-6 md:gap-8 lg:gap-10"> <a href="/es-AR/" class="hidden items-center space-x-2 md:flex"> <svg width="57" height="50" viewBox="0 0 57 50" xmlns="http://www.w3.org/2000/svg" class="size-8"><path d="M26.5349 8.80386V28.3333H8.8259C3.94933 28.3107 0 24.3764 0 19.5408V0H17.7033C22.557 0.0340136 26.5349 3.97392 26.5349 8.80386Z" fill="currentColor"></path><path d="M26.5349 44.2404V31.5137H14.9216C11.7507 31.5137 9.16357 34.1044 9.16357 37.245V50.0001H20.7769C23.9478 49.9717 26.5349 47.4094 26.5349 44.2404Z" fill="currentColor"></path><path d="M29.7458 8.80386V28.3333H47.4549C52.3314 28.3107 56.2808 24.3708 56.2808 19.5408V0H38.5717C33.7238 0.0283447 29.7458 3.96825 29.7458 8.79819V8.80386Z" fill="currentColor"></path><path d="M29.7458 44.2404C29.7458 47.4094 32.3387 49.9717 35.5096 50.0001H47.1229V37.245C47.1229 34.1044 44.5358 31.5137 41.3649 31.5137H29.7458V44.2404Z" fill="currentColor"></path></svg> <span class="hidden font-bold sm:inline-block"> DeSci LATAM </span> </a> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var v=Object.defineProperty;var A=(c,s,a)=>s in c?v(c,s,{enumerable:!0,configurable:!0,writable:!0,value:a}):c[s]=a;var d=(c,s,a)=>(A(c,typeof s!="symbol"?s+"":s,a),a);var u;{let c={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},s=t=>{let[e,n]=t;return e in c?c[e](n):void 0},a=t=>t.map(s),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,s(n)]));customElements.get("astro-island")||customElements.define("astro-island",(u=class extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var f;if(!this.hydrator||!this.isConnected)return;let e=(f=this.parentElement)==null?void 0:f.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},l=this.querySelectorAll("template[data-astro-template]");for(let o of l){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let h;try{h=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(o){let i=this.getAttribute("component-url")||"<unknown>",b=this.getAttribute("component-export");throw b&&(i+=` (export ${b})`),console.error(`[hydrate] Error parsing props for component ${i}`,this.getAttribute("props"),o),o}let p;await this.hydrator(this)(this.Component,h,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url"),[l,{default:h}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]),p=this.getAttribute("component-export")||"default";if(!p.includes("."))this.Component=l[p];else{this.Component=l;for(let y of p.split("."))this.Component=this.Component[y]}return this.hydrator=h,this.hydrate},e,this)}catch(r){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,r)}}attributeChangedCallback(){this.hydrate()}},d(u,"observedAttributes",["props"]),u))}})();</script><astro-island uid="Z193rVn" prefix="r1" component-url="/_astro/sheet-mobile-nav.pcWLhRyg.js" component-export="SheetMobileNav" renderer-url="/_astro/client.sPh9zV4C.js" props="{&quot;mainNavItems&quot;:[1,[[0,{&quot;title&quot;:[0,&quot;Blog&quot;],&quot;href&quot;:[0,&quot;blog&quot;],&quot;description&quot;:[0,&quot;Explora nuestros artículos y publicaciones.&quot;]}]]],&quot;sidebarNavItems&quot;:[1,[[0,{&quot;title&quot;:[0,&quot;Ecosistema&quot;],&quot;items&quot;:[1,[[0,{&quot;title&quot;:[0,&quot;Proyectos&quot;],&quot;href&quot;:[0,&quot;projects&quot;],&quot;description&quot;:[0,&quot;Descubre los proyectos y DAO&#39;s del ecosistema DeSci.&quot;],&quot;image&quot;:[0,&quot;/images/examples/landing.jpg&quot;]}],[0,{&quot;title&quot;:[0,&quot;Eventos&quot;],&quot;href&quot;:[0,&quot;events&quot;],&quot;description&quot;:[0,&quot;Explora los eventos y actividades relacionadas.&quot;],&quot;image&quot;:[0,&quot;/images/examples/changelog.jpg&quot;],&quot;disabled&quot;:[0,true]}],[0,{&quot;title&quot;:[0,&quot;Recursos&quot;],&quot;href&quot;:[0,&quot;resources&quot;],&quot;description&quot;:[0,&quot;Accede a recursos útiles para la comunidad.&quot;],&quot;image&quot;:[0,&quot;/images/examples/waitlist.jpg&quot;],&quot;forceReload&quot;:[0,true],&quot;disabled&quot;:[0,true]}],[0,{&quot;title&quot;:[0,&quot;Comunidades&quot;],&quot;href&quot;:[0,&quot;communities&quot;],&quot;description&quot;:[0,&quot;Encuentra y participa de otras comunidades DeSci.&quot;],&quot;disabled&quot;:[0,true]}]]]}],[0,{&quot;title&quot;:[0,&quot;Comunidad&quot;],&quot;items&quot;:[1,[[0,{&quot;title&quot;:[0,&quot;Nosotros&quot;],&quot;href&quot;:[0,&quot;about-us&quot;],&quot;description&quot;:[0,&quot;Conoce más sobre DeSci LATAM y nuestro equipo.&quot;]}],[0,{&quot;title&quot;:[0,&quot;Changelog&quot;],&quot;href&quot;:[0,&quot;changelog&quot;],&quot;description&quot;:[0,&quot;Mira los cambios y actualizaciones recientes.&quot;]}],[0,{&quot;title&quot;:[0,&quot;Roadmap&quot;],&quot;href&quot;:[0,&quot;roadmap&quot;],&quot;description&quot;:[0,&quot;Explora nuestro plan de desarrollo y objetivos futuros.&quot;],&quot;disabled&quot;:[0,true]}],[0,{&quot;title&quot;:[0,&quot;Donaciones&quot;],&quot;href&quot;:[0,&quot;donations&quot;],&quot;description&quot;:[0,&quot;Si te gusta nuestro trabajo, podes apoyarnos con una donación.&quot;]}]]]}]]],&quot;slot&quot;:[0,&quot;mobile-nav-header&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;SheetMobileNav&quot;,&quot;value&quot;:true}" await-children=""><button class="inline-flex items-center justify-center rounded-[50px] whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 mr-2 h-8 px-1.5 md:hidden" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r1R0:" data-state="closed"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" class="size-5"><path fill-rule="evenodd" d="M3 7a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" stroke="currentColor" fill="currentColor" stroke-width="0px"></path></svg><span class="sr-only">Toggle Menu</span></button><!--astro:end--></astro-island> <div class="hidden md:flex"> <astro-island uid="Z1PAxLe" prefix="r0" component-url="/_astro/main-navigation-menu.6PLcJDNo.js" component-export="MainNavigationMenu" renderer-url="/_astro/client.sPh9zV4C.js" props="{&quot;slot&quot;:[0,&quot;left-header&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;MainNavigationMenu&quot;,&quot;value&quot;:true}" await-children=""><nav aria-label="Main" data-orientation="horizontal" dir="ltr" class="relative z-10 flex max-w-max flex-1 items-center justify-center"><div style="position:relative"><ul data-orientation="horizontal" class="group flex flex-1 list-none items-center justify-center space-x-1" dir="ltr"><li><button id="radix-:r0R0:-trigger-radix-:r0Rb:" data-state="closed" aria-expanded="false" aria-controls="radix-:r0R0:-content-radix-:r0Rb:" class="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 group" data-radix-collection-item="">Ecosistema<!-- --> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down relative top-[1px] ml-1 size-3 transition duration-200 group-data-[state=open]:rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button></li><li><button id="radix-:r0R0:-trigger-radix-:r0Rj:" data-state="closed" aria-expanded="false" aria-controls="radix-:r0R0:-content-radix-:r0Rj:" class="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 group" data-radix-collection-item="">Comunidad<!-- --> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down relative top-[1px] ml-1 size-3 transition duration-200 group-data-[state=open]:rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button></li><li><a href="blog" class="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">Blog</a></li></ul></div><div class="absolute left-0 top-full flex justify-center"></div></nav><!--astro:end--></astro-island> </div> </div> <!-- logo mobile center --> <div class="absolute top-1/2 left-1/2 -translate-x-4 -translate-y-4 md:hidden"> <a href="/es-AR/" aria-label="Astronomy homepage"> <svg width="57" height="50" viewBox="0 0 57 50" xmlns="http://www.w3.org/2000/svg" class="size-8"><path d="M26.5349 8.80386V28.3333H8.8259C3.94933 28.3107 0 24.3764 0 19.5408V0H17.7033C22.557 0.0340136 26.5349 3.97392 26.5349 8.80386Z" fill="currentColor"></path><path d="M26.5349 44.2404V31.5137H14.9216C11.7507 31.5137 9.16357 34.1044 9.16357 37.245V50.0001H20.7769C23.9478 49.9717 26.5349 47.4094 26.5349 44.2404Z" fill="currentColor"></path><path d="M29.7458 8.80386V28.3333H47.4549C52.3314 28.3107 56.2808 24.3708 56.2808 19.5408V0H38.5717C33.7238 0.0283447 29.7458 3.96825 29.7458 8.79819V8.80386Z" fill="currentColor"></path><path d="M29.7458 44.2404C29.7458 47.4094 32.3387 49.9717 35.5096 50.0001H47.1229V37.245C47.1229 34.1044 44.5358 31.5137 41.3649 31.5137H29.7458V44.2404Z" fill="currentColor"></path></svg> </a> </div> <div class="flex items-center gap-x-4"> <!-- <a
+        href={siteConfig.links.github}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="github"
+      >
+        <Icon name="github" class="size-[22px]" />
+      </a> --> <astro-island uid="1Kpznx" prefix="r2" component-url="/_astro/theme-toggle.RRY5vFNj.js" component-export="ThemeToggle" renderer-url="/_astro/client.sPh9zV4C.js" props="{}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children=""><div></div><!--astro:end--></astro-island> </div> </div> </header> <main class="">  <div class="relative container max-w-screen-md py-10"> <button onclick="history.back()" class="items-center justify-center rounded-[50px] whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 text-[1rem] absolute left-[-200px] top-10 hidden xl:inline-flex text-muted-foreground" data-astro-transition-scope="astro-ks7i2azy-1"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-2 size-4" data-icon="lucide:chevron-left">  <symbol id="ai:lucide:chevron-left"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18l-6-6l6-6"/></symbol><use xlink:href="#ai:lucide:chevron-left"></use>  </svg>  Back
+</button> <article class="prose dark:prose-invert max-w-none"> <a href="/blog/category/DeSci" data-astro-transition-scope="astro-4rjw2hgd-2"> <div class="inline-flex items-center border px-2.5 py-0.5 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 rounded-md capitalize">DeSci</div> </a> <img src="/images/blog/placeholder-2.jpg" class="rounded-xl overflow-hidden my-6" alt="¿De qué está hecho DeSci? Ocho preguntas simples para aclararlo para los científicos" data-astro-transition-scope="astro-3fmipmlo-3" width="720" height="360" loading="lazy" decoding="async"> <div class="flex items-center justify-between"> <span class="font-medium text-muted-foreground" data-astro-transition-scope="astro-5hio3otc-4"> Jul 15, 2022  </span> </div> <h1 class="font-heading text-4xl my-4" data-astro-transition-scope="astro-3mzj52bz-5"> ¿De qué está hecho DeSci? Ocho preguntas simples para aclararlo para los científicos </h1> <p>Descubre qué es DeSci y cómo funciona este movimiento en la ciencia que busca resolver los problemas actuales, facilitando el acceso a la investigación, la revisión por pares, el financiamiento a través de la tecnología blockchain, y mucho más.</p> <hr class="my-6">  <p>Es posible que hayas oído hablar de DeSci en tu vida, o tal vez no. Quizás hayas leído que es útil y beneficioso y que ayuda a evitar barreras para publicar tu propuesta de investigación y obtener financiamiento. Pero luego intentas adentrarte en él y… ¿cómo diablos funciona? ¿A dónde ir y qué hacer? Te preguntas: soy científico, pero no soy un nerd. No hablo de tecnología de la información. ¿Cómo puedo entender algo allí? Perdido en ese extraño mundo de la web3, decides enviar tu propuesta a revistas científicas tradicionales.</p>
+<p>Sí, el entorno de la comunidad DeSci puede sentirse un poco confuso para la mayoría de los científicos en este momento. Pero estamos seguros de que puedes sacar provecho de él. Permítenos explicarte por qué y cómo.</p>
+<h3 id="qué-es-desci">¿Qué es DeSci?</h3>
+<p><strong>DeSci es un movimiento en la ciencia que tiene como objetivo resolver sus problemas actuales. DeSci significa:</strong></p>
+<ul>
+<li>Acceso fácil y contribución a la investigación científica.</li>
+<li>Revisión por pares de propuestas de investigación.</li>
+<li>Financiamiento de investigación a través de crowdfunding y otros mecanismos transparentes y equitativos.</li>
+<li>Publicación sencilla de resultados, sin importar cuán sesgados o polémicos sean.</li>
+<li>Obtención de reconocimiento y construcción de una reputación.</li>
+<li>Colaboración en todo el campo.</li>
+</ul>
+<p>DeSci crea un entorno de organizaciones descentralizadas. Estas organizaciones no tienen un centro de gobierno donde se toman decisiones y se almacena información. Su liderazgo se distribuye entre todos los miembros de la comunidad. En el entorno de DeSci, todo el proceso de conducción e intercambio de investigaciones se vuelve más fácil y rápido, sin que su seguridad y profundidad se vean comprometidas. Esto sucede gracias a las nuevas tecnologías que se encuentran en la base de DeSci.</p>
+<h3 id="es-desci-una-ciencia-en-la-cadena-de-bloques-y-cómo-funciona">¿Es DeSci una ciencia en la cadena de bloques, y cómo funciona?</h3>
+<p>Sí, DeSci utiliza tecnologías de cadena de bloques, pero de una manera única.</p>
+<p>En primer lugar, recordemos qué es una cadena de bloques. La cadena de bloques es una cadena de registros de información organizados en un libro de registro distribuido. “Distribuido” significa que la información no se almacena en un solo centro, sino que está alojada en millones de computadoras de la cadena. Se actualiza cada diez minutos, verificando continuamente todas las transacciones, compromisos y nuevos registros realizados por sus usuarios. Por lo tanto, la cadena de bloques es un sistema seguro y transparente: nadie tiene suficiente poder para piratearlo, y cada miembro puede ver todos los cambios en el registro.</p>
+<p>Inicialmente, la cadena de bloques se utilizaba para transacciones, formando así DeFi, que significa finanzas descentralizadas. DeFi se trata de servicios financieros basados en criptomonedas que ya han demostrado su seguridad, transparencia y conveniencia. Resulta que las personas pueden lidiar con el dinero sin necesidad de bancos y sus procedimientos complicados. Ahora es el momento de la ciencia descentralizada, que utiliza estas cualidades de transparencia y distribución para hacer que el financiamiento, la realización y la publicación de investigaciones sean más rápidos, fáciles y accesibles.</p>
+<h3 id="qué-es-un-nft-y-cómo-ayuda-a-un-científico">¿Qué es un NFT y cómo ayuda a un científico?</h3>
+<p>Existen varios mecanismos mediante los cuales DeSci puede utilizar la cadena de bloques para alcanzar sus objetivos.</p>
+<p>El más conocido es el NFT, que ya es conocido en el mundo del arte. NFT (token no fungible) es un certificado de criptografía de cualquier objeto digital. Un NFT no se puede copiar ni sustituir, pero se puede vender. Los NFT se pueden utilizar para confirmar la propiedad o el uso de un videojuego, un objeto de arte o un diploma de una universidad. Por ejemplo, en 2022, la Universidad HOSEO y el Instituto de Física y Tecnología de Moscú dieron a sus graduados diplomas NFT creados en la plataforma OpenSea utilizando Ethereum.</p>
+<p>Los NFT también se pueden utilizar para resultados científicos. Algunos científicos ya crean sus propios NFT para financiar sus propuestas.</p>
+<p>Los IP-NFT representan derechos legales sobre la propiedad intelectual de la investigación y los datos; distribuyen la propiedad, la autoría y la gobernanza; proporcionan nuevas formas de interactuar con secretos comerciales y derechos de publicidad. Por ejemplo, un ingeniero realizó mucho trabajo para la investigación médica y contribuyó a su éxito, pero los investigadores no lo mencionaron como autor: bueno, él es un ingeniero y su contribución se considera “puramente técnica”. Pero no es justo, y el IP NFT resuelve este problema: su trabajo y su autoría quedan registrados, y nadie puede privarlo de su propiedad intelectual.</p>
+<h3 id="qué-es-una-dao-y-cómo-funciona">¿Qué es una DAO y cómo funciona?</h3>
+<p>Una DAO es una organización autónoma descentralizada en la que el proceso de toma de decisiones se divide entre los miembros de la comunidad. Todos los procedimientos están cifrados en contratos inteligentes que se ejecutan automáticamente.</p>
+<p>Imagina una comunidad científica abierta de titulares de tokens individuales que pueden compartir sus propuestas de investigación, revisar las investigaciones de otros, votar por ellas, financiarlas con sus tokens y colaborar de cualquier manera posible. Obtienes información y datos sin barreras de pago. El sistema DAO anima a científicos afines de todo el mundo a colaborar y trabajar juntos.</p>
+<h3 id="cómo-puede-financiarse-mi-investigación">¿Cómo puede financiarse mi investigación?</h3>
+<p>Existen varios mecanismos posibles de financiamiento propuestos por DeSci.</p>
+<p><strong>Crowdfunding</strong></p>
+<p>Los miembros de la comunidad pueden donar dinero para financiar la investigación o participar de alguna manera (por ejemplo, proporcionando los datos o el equipo necesario).</p>
+<p><strong>Patrocinio mediante la compra de IP NFT</strong></p>
+<p>Un inversor puede comprar todo el proyecto NFT, o varios inversores pueden unirse y comprarlo juntos, participando así en la propiedad intelectual.</p>
+<p><strong>Votación directa</strong></p>
+<p>Los miembros de la comunidad en DAO votan con sus tokens. Los tokens de votación son como acciones en un mundo digital: ser propietario de un token te da el derecho a votar por la investigación que te gusta. Una comunidad descentralizada de expertos evalúa el valor de la investigación.</p>
+<p>Imagina, por ejemplo, que subes tu investigación y obtienes 100 tokens para votar por la investigación de otros miembros de la comunidad. Si la investigación obtiene una mayoría y es aprobada, el científico puede canjear los tokens que recibió por tokens TIP3 y obtener su dinero real para comprar equipo y todo lo que necesita para su investigación. Votar por la investigación te brinda la oportunidad de tener una parte de la propiedad intelectual y, por lo tanto, ganar dinero, por ejemplo, si se trata de un ensayo clínico farmacéutico u otro resultado importante que puede generar beneficios empresariales. Después de su lanzamiento exitoso, la DAO puede recuperar parte de su dinero debido a las condiciones del contrato inteligente.</p>
+<h3 id="cómo-funcionan-los-mecanismos-de-reputación-en-desci">¿Cómo funcionan los mecanismos de reputación en DeSci?</h3>
+<p>La reputación en DeSci no depende de tu capacidad para publicar tus propuestas en revistas científicas. Se trata más de tu contribución real y de cómo la estiman otros miembros de la comunidad. Cada miembro de la DAO participa y realiza compromisos hacia su objetivo. Todas las decisiones son transparentes y contribuyen a la reputación de los participantes. Esto puede suceder de diversas maneras, que pueden gestionar las reputaciones en toda la comunidad y en todo el mundo de DeSci.</p>
+<p>GOSH DAO, por ejemplo, propone CFTs (tokens comprometidos fungibles), que funcionan como un índice h o un currículum digital. En el entorno de DeSci, no necesitas multiplicar tus publicaciones para acceder al financiamiento. Simplemente puedes realizar tu investigación y obtener CFTs de otros miembros de la comunidad que aprecien tus resultados.</p>
+<p>Como miembro de la comunidad, también tienes tus CFTs y puedes otorgarlos a otros cuando aprecias su compromiso. Tu CFT también crece cuando revisas propuestas de otros, participas en mentorías, colaboras en investigaciones de otros autores y realizas cualquier otra actividad relacionada con tu área. Con los CFTs, no necesitas preocuparte por presentar tus cualidades al mundo. Los CFTs automatizan por completo este proceso.</p>
+<h3 id="qué-cosas-reales-ya-se-han-hecho-en-y-a-través-de-la-comunidad-desci">¿Qué cosas reales ya se han hecho en y a través de la comunidad DeSci?</h3>
+<p>Desde 2021 ha habido un crecimiento explosivo en las iniciativas de DAO. Ha habido un gran progreso en el intercambio de datos, la recaudación de fondos y la revisión por pares.</p>
+<p>El pionero aquí son las DAO de biotecnología, como VitaDAO, que financia investigaciones en etapas tempranas para la longevidad, la extensión de la vida humana y la esperanza de vida saludable. Ya han financiado más de 10 investigaciones relacionadas con la enfermedad de Alzheimer, el envejecimiento y otros temas. Puedes comprar tokens Vita o ganarlos mediante la colaboración. VitaDAO cuenta con más de 1300 titulares de tokens en este momento. La semana pasada, VitaDAO cerró una ronda de financiamiento de $4,1 millones con Pfizer Ventures y otros inversores.</p>
+<p>The Molecule DAO tiene como objetivo unir a investigadores e inversores potenciales, con más de 4500 miembros de la comunidad de DAO y 3 DAO de Bio con más de $10 millones en su red destinada a la investigación. Es un gran centro de DAO que buscan financiamiento y de inversores que necesitan startups innovadoras.</p>
+<p>Pero la mayoría de las DAO todavía están en su infancia, lo que no los hace menos interesantes. Por ejemplo, LabDAO se centra en compartir equipos y herramientas de TI y en ayudar a los bio científicos e ingenieros a colaborar, compartir datos y ahorrar fondos en recursos y equipos.</p>
+<h3 id="qué-le-falta-por-hacer-a-desci">¿Qué le falta por hacer a DeSci?</h3>
+<p>DeSci apenas está comenzando a colaborar con las formas tradicionales del sistema científico actual y los reguladores gubernamentales. Necesitan más puentes para trabajar juntos, especialmente en campos como la salud pública o la prevención del calentamiento global. Hay preguntas sin resolver sobre el papel de los expertos en DAO, porque no es una tarea fácil combinar la transparencia y la equidad con una evaluación competente de la investigación. Además, hay un problema: a veces, los entusiastas de Web3 se concentran demasiado en sus herramientas en lugar de en su integración en el trabajo de los científicos. Estos dos mundos deberían encontrarse.</p>
+<p>Pero estos problemas son manejables. Cuanto más rápido los científicos, los médicos y el público en general descubran las ventajas de DeSci, más diverso, popular y próspero será el mundo de DeSci y más contribuirá al bien público. Tal vez por ahora sea un poco confuso, pero estamos seguros de que puede aportar mucho a tu investigación y vale la pena explorarlo.</p>
+<h3 id="puedes-obtener-más-información-sobre-los-mecanismos-y-ventajas-de-desci-aquí">Puedes obtener más información sobre los mecanismos y ventajas de DeSci aquí:</h3>
+<p><a href="https://ethereum.org/en/desci/">https://ethereum.org/en/desci/</a></p>
+<p><a href="https://medium.com/paradigm-research/decentralized-science-desci-web3-mediated-future-of-science-2547f9a88c40">https://medium.com/paradigm-research/decentralized-science-desci-web3-mediated-future-of-science-2547f9a88c40</a></p>
+<h3 id="para-participar-en-desci-y-conectarte-con-participantes-activos-del-movimiento-consulta-aquí">Para participar en DeSci y conectarte con participantes activos del movimiento, consulta aquí:</h3>
+<p>Twitter: #DeSci, @paulkhls (Paul Kolhaas, cofundador de Molecule), @jocelynpearl (Jocelynn Pearl), @GolatoTyler (Tyler Golato, cofundador de Molecule, núcleo en VitaDAO y PsyDAO), @Futurizt (Mitja Goroshevsky, fundador de GOSH DAO), Ariella Coler-Reilly🏳️‍🌈🩺🖋 (Ariella Coler-Reilly, editora gerente de VitaDAO) y muchos otros.</p>
+<p>Telegram: @BlockchainForScience</p>
+<p>Este post es una traducción, podes ver el original aquí:</p>
+<p><a href="https://medium.com/@phs_dao/what-is-desci-made-of-eight-simple-questions-to-make-it-clear-for-scientists-38ed29e830eb">https://medium.com/@phs_dao/what-is-desci-made-of-eight-simple-questions-to-make-it-clear-for-scientists-38ed29e830eb</a></p>  </article> </div>  </main> <footer class="border-t"> <div class="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0"> <div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0"> <p>Síguenos en nuestras redes sociales para estar al tanto de las últimas noticias y actualizaciones.</p> <!--  <a href="/" aria-label="Astronomy homepage">
+        <Icon name="stars-outline" class="size-8" />
+      </a> --> <!-- 
+
+      <p class="text-center text-sm leading-loose md:text-left balance-text">
+        Built by{" "}
+        <a
+          href={siteConfig.links.twitter}
+          target="_blank"
+          rel="noreferrer"
+          class="font-medium underline underline-offset-4"
+        >
+          mickasmt
+        </a>
+        . Based on{" "}
+        <a
+          href="https://github.com/shadcn-ui/taxonomy"
+          target="_blank"
+          rel="noreferrer"
+          class="font-medium underline underline-offset-4"
+        >
+          shadcn-ui/taxonomy
+        </a>
+        . Hosted on{" "}
+        <a
+          href="https://vercel.com"
+          target="_blank"
+          rel="noreferrer"
+          class="font-medium underline underline-offset-4"
+        >
+          Vercel
+        </a>
+        . The source code is available on{" "}
+        <a
+          href={siteConfig.links.github}
+          target="_blank"
+          rel="noreferrer"
+          class="font-medium underline underline-offset-4"
+        >
+          GitHub
+        </a>
+        .
+      </p> --> </div> </div> </footer>   <script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();</script><astro-island uid="Z16ouxW" component-url="/_astro/_astro-entry_sonner.f0x24G-5.js" component-export="Toaster" renderer-url="/_astro/client.sPh9zV4C.js" props="{&quot;richColors&quot;:[0,true]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;Toaster&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island> </body></html>
