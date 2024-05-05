@@ -6,6 +6,16 @@ import MenuIcon from './icons/MenuIcon.astro'
 import Search from '@/components/Search'
 import TagIcon from './icons/TagIcon.astro'
 import ToggleTheme from './ToggleTheme.astro'
+import LangLink from "./LangLink.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const { lang2 } = Astro.props; 
+const lang = getLangFromUrl(Astro.url); 
+const t = useTranslations(lang);
+
+const homeSlug = `/${lang || ""}`;
+const blogSlug = `/${lang || ""}/blog`;
+const aboutSlug = `/${lang || ""}/about`;
 
 // ADD YOUR SOCIAL NETWORKS HERE
 const SOCIALNETWORKS = [
@@ -36,12 +46,23 @@ const SOCIALNETWORKS = [
 			<div
 				class='flex flex-col gap-4 md:flex-row md:border-r-2 border-black pr-4 dark:border-white'
 			>
-				<HeaderLink href='/tags' class='flex items-center gap-1 text-2xl md:text-base'>
+				<!-- <HeaderLink href='/tags' class='flex items-center gap-1 text-2xl md:text-base'>
 					<TagIcon /> Tags
-				</HeaderLink>
+				</HeaderLink> -->
+				<div class='flex items-center gap-1 text-2xl md:text-base'>
+					<LangLink language="en" isActive={lang2 == "en"} />
+					<LangLink language="es" isActive={lang2 == "es"} />
+					<LangLink language="pt" isActive={lang2 == "pt"} />  
+				  </div>
 			</div>
 
 			<div class='flex justify-center items-center md:justify-end gap-3 md:p-0'>
+
+				<!-- <div class="internal-links">
+					<HeaderLink href={homeSlug}>Home</HeaderLink>
+					<HeaderLink href={blogSlug}>Blog</HeaderLink>
+					<HeaderLink href={aboutSlug}>{t("nav.about")}</HeaderLink>
+				  </div> -->
 				{
 					SOCIALNETWORKS.map((network) => (
 						<HeaderLink class='' href={network.url} target='_blank' aria-label={network.name}>
@@ -49,6 +70,7 @@ const SOCIALNETWORKS = [
 						</HeaderLink>
 					))
 				}
+				 
 			</div>
 		</nav>
 	</div>
