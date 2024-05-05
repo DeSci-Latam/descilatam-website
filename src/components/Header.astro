@@ -34,7 +34,12 @@ const SOCIALNETWORKS = [
 ---
 
 <header class='relative flex items-center h-12 font-semibold'>
-	<a class='text-lg mr-auto' href='/'>Home</a>
+		<!-- <div class="internal-links">
+					<HeaderLink href={homeSlug}>Home</HeaderLink>
+					<HeaderLink href={blogSlug}>Blog</HeaderLink>
+					<HeaderLink href={aboutSlug}>{t("nav.about")}</HeaderLink>
+				  </div> -->
+	<a class='text-lg mr-auto' href={homeSlug}>{t("nav.home")}</a>
 
 	<div
 		id='astro-header-drawer'
@@ -58,11 +63,7 @@ const SOCIALNETWORKS = [
 
 			<div class='flex justify-center items-center md:justify-end gap-3 md:p-0'>
 
-				<!-- <div class="internal-links">
-					<HeaderLink href={homeSlug}>Home</HeaderLink>
-					<HeaderLink href={blogSlug}>Blog</HeaderLink>
-					<HeaderLink href={aboutSlug}>{t("nav.about")}</HeaderLink>
-				  </div> -->
+			
 				{
 					SOCIALNETWORKS.map((network) => (
 						<HeaderLink class='' href={network.url} target='_blank' aria-label={network.name}>
