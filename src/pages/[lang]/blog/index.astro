@@ -1,0 +1,54 @@
+---
+import { getBlogPosts } from "../../../content/config";
+import FormattedDate from "../../../components/FormattedDate.astro";
+import BaseLayout from '../../../layouts/BaseLayout.astro'
+import ListCategories from '@/components/ListCategories'
+import TitlePage from '@/components/TitlePage'
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import ListPosts from '@/components/ListPosts'
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+
+const posts = (await getBlogPosts())
+  ?.filter((blog) => {
+    return blog?.data?.lang === lang;
+  })
+  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+
+export async function getStaticPaths() {
+  return ["en", "pt", "es"].map((lang) => {
+    return { params: { lang } };
+  });
+}
+
+const page = Astro.props;
+---
+
+<BaseLayout  title="Blog" description="Blog" lang={lang}>
+  <TitlePage title={t("home.title")} />
+	<ListCategories />
+ 
+ <!--    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <a href={`/${lang}/blog/${post.slug}`}>
+              <img width={720} height={360} src={post.heroImage} alt="" />
+              <h4 class="title">{post.data.title}</h4>
+              <p class="date">
+                <FormattedDate date={post.data.pubDate} />
+              </p>
+            </a>
+          </li>
+        ))
+      }
+    </ul> -->
+
+    <div>
+      <h2 class='text-lg font-medium tracking-wide text-end'>Latest Posts</h2>
+      <ListPosts FirstBig={true} posts={posts} />
+    </div>
+
+  
+</BaseLayout >

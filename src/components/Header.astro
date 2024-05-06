@@ -9,11 +9,11 @@ import ToggleTheme from './ToggleTheme.astro'
 import LangLink from "./LangLink.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
-const { lang2 } = Astro.props; 
+/* const { lang2 } = Astro.props;  */
 const lang = getLangFromUrl(Astro.url); 
 const t = useTranslations(lang);
 
-const homeSlug = `/${lang || ""}`;
+const homeSlug = `/${lang || ""}/`;
 const blogSlug = `/${lang || ""}/blog`;
 const aboutSlug = `/${lang || ""}/about`;
 
@@ -55,9 +55,9 @@ const SOCIALNETWORKS = [
 					<TagIcon /> Tags
 				</HeaderLink> -->
 				<div class='flex items-center gap-1 text-2xl md:text-base'>
-					<LangLink language="en" isActive={lang2 == "en"} />
-					<LangLink language="es" isActive={lang2 == "es"} />
-					<LangLink language="pt" isActive={lang2 == "pt"} />  
+					<LangLink language="en" isActive={lang == "en"} />
+					<LangLink language="es" isActive={lang == "es"} />
+					<LangLink language="pt" isActive={lang == "pt"} />  
 				  </div>
 			</div>
 

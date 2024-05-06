@@ -1,4 +1,5 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import BaseHead from '@/components/BaseHead'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -6,10 +7,20 @@ import ProviderTheme from '@/components/ProviderTheme'
 import ProviderAnimations from '@/components/ProviderAnimations'
 import TwSizeIndicator from '@/components/TwSizeIndicator'
 import EditBlog from '@/components/editBlog'
-const { title, description, image, articleDate } = Astro.props
+import { useTranslations, type UiType } from "../i18n/utils";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, lang, image, articleDate } = Astro.props
+
+  
+const t = useTranslations(lang as UiType);
+
+
 ---
 
-<html lang='en' class='scroll-smooth'>
+
+<html lang={lang} class='scroll-smooth'>
 	<head>
 		<BaseHead title={title} description={description} ogImage={image} articleDate={articleDate} />
 		<ProviderTheme />
@@ -20,7 +31,7 @@ const { title, description, image, articleDate } = Astro.props
 		<main
 			class='px-5 sm:mx-auto sm:max-w-2xl sm:px-8 lg:px-0 antialiased md:max-w-6xl grid gap-12 mt-4 overflow-hidden md:overflow-visible'
 		>
-			<Header />
+			<Header title={t("site.title")} lang={lang} />
 			<slot />
 			<Footer />
 		</main>
