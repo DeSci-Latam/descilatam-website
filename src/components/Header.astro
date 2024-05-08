@@ -19,15 +19,15 @@ const aboutSlug = `/${lang || ""}/about`;
 
 // ADD YOUR SOCIAL NETWORKS HERE
 const SOCIALNETWORKS = [
-	{
+/* 	{
 		name: 'Github',
 		url: 'https://github.com/danielcgilibert/blog-template',
 		icon: GithubIcon
-	},
+	}, */
 
 	{
 		name: 'Twitter',
-		url: 'https://github.com/danielcgilibert/blog-template',
+		url: 'https://twitter.com/WorldOfDeSci',
 		icon: TwitterIcon
 	}
 ]
@@ -39,7 +39,7 @@ const SOCIALNETWORKS = [
 					<HeaderLink href={blogSlug}>Blog</HeaderLink>
 					<HeaderLink href={aboutSlug}>{t("nav.about")}</HeaderLink>
 				  </div> -->
-	<a class='text-lg mr-auto' href={homeSlug}>{t("nav.home")}</a>
+	<a class='text-lg mr-auto' href={homeSlug}><!-- {t("nav.home")} --></a>
 
 	<div
 		id='astro-header-drawer'
@@ -77,14 +77,14 @@ const SOCIALNETWORKS = [
 	</div>
 
 	<div class='flex items-center gap-3 md:pl-3' transition:persist='navbar'>
-		<div>
-			<Search />
-		</div>
-		<ToggleTheme />
-		<button id='astro-header-drawer-button' type='button' class='md:ml-6 md:hidden'>
+		<!-- 	<div>
+				<Search />
+			</div> -->
+		<!-- <ToggleTheme /> -->
+	<!-- 	<button id='astro-header-drawer-button' type='button' class='md:ml-6 md:hidden'>
 			<MenuIcon />
 			<span class='sr-only'>Show Menu</span>
-		</button>
+		</button> -->
 	</div>
 </header>
 <script>
