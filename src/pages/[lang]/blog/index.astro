@@ -25,7 +25,16 @@ export async function getStaticPaths() {
 const page = Astro.props;
 ---
 
-<BaseLayout  title="Blog" description="Blog" lang={lang}>
+<BaseLayout
+  title={t("site.title")}
+  description={t("site.description")}
+  lang={lang}
+  pubDate={new Date()}
+  heroImage={{ src: "path/to/image", width: 100, height: 100, format: "png" }}
+  category="Category 1"
+  tags={["tag1", "tag2"]}
+  draft={false}
+>
   <TitlePage title={t("home.title")} />
 	<ListCategories />
  
