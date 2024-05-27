@@ -13,14 +13,12 @@ export async function getStaticPaths() {
 	}))
 }
 
-const { tag, lang } = Astro.props
+const { tag } = Astro.props
 
 const posts = await getPostByTag(tag)
-const filteredPosts = posts.filter(post => post.data.lang === lang)
 ---
 
 <BaseLayout title={tag}>
 	<TitlePage title={tag} />
-	<ListPosts posts={filteredPosts} />
+	<ListPosts posts={posts} />
 </BaseLayout>
-

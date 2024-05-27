@@ -58,3 +58,4 @@ export function getLocalizedPathname(pathname: string, lang: UiType) {
   }
   return `/${lang}${pathname}`;
 }
+

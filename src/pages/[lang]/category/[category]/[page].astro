@@ -6,11 +6,17 @@ import TitlePage from '@/components/TitlePage'
 import { sluglify, unsluglify, getCategories, getPosts } from '@/utils'
 import { siteConfig } from '@/data/site.config'
 import Pagination from '@/components/Pagination'
+import { getLangFromUrl, useTranslations } from "../../../../i18n/utils";
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
 
 
 
 
 export async function getStaticPaths({ paginate }: any) {
+
+
 	const categories = await getCategories()
 	const allPosts = await getPosts()
 
@@ -20,15 +26,23 @@ export async function getStaticPaths({ paginate }: any) {
 			(post) => post.data.category.toLowerCase() === unsluglifyNameCategory
 		)
 
+		
+
 		return paginate(filteredPosts, {
 			params: {
 				category: sluglify(category.toLowerCase())
 			},
 			pageSize: siteConfig.paginationSize
 		})
-	})
-}
 
+		
+	})
+	
+
+	return ["en", "pt", "es"].map((lang) => {
+      return { params: { lang } };
+    });
+}
 
 const params = Astro.params
 const { page } = Astro.props

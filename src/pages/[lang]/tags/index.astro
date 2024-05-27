@@ -3,9 +3,8 @@ import BaseLayout from '@/layouts/BaseLayout'
 import TitlePage from '@/components/TitlePage'
 import { getTags } from '@/utils'
 const tags = await getTags()
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
-import { getBlogPosts } from "../../content/config";
-
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import { getBlogPosts } from "../../../content/config";
 
 const { lang } = Astro.params;
 const t = useTranslations(lang);
