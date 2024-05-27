@@ -13,8 +13,10 @@ const { className } = Astro.props;
 const { currentLocale } = Astro;
 console.log ({currentLocale});
 ---
-<section class="bg-[#212739] text-primary w-full items-center text-center p-1 hover:cursor-pointer hover:text-white hover:underline hover:outline-1"><a href="https://explorer.gitcoin.co/#/round/42161/39/30" target="_blank">Ronda DeSci Activa en Gitcoin</a></section>
-<header
+<!-- <section class="bg-[#212739] text-primary w-full items-center text-center p-1 hover:cursor-pointer hover:text-white hover:underline hover:outline-1"><a href="https://explorer.gitcoin.co/#/round/42161/39/30" target="_blank">Ronda DeSci Activa en Gitcoin</a></section>
+ -->
+
+ <header
   class={cn(
     "flex items-center h-16 md:h-18 z-50 sticky top-0 bg-background",
     className
@@ -27,7 +29,7 @@ console.log ({currentLocale});
         <span class="hidden font-bold sm:inline-block">
           {siteConfig.name}
         </span>
-      </a>
+      </a> 
 
       <slot name="mobile-nav-header" />
 
