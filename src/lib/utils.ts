@@ -11,21 +11,10 @@ export function wait(ms: number) {
 }
 
 
-export function formatDate(dateInput: string | Date): string {
-  let date: Date;
-
-  if (typeof dateInput === 'string') {
-    date = parseISO(dateInput);
-  } else {
-    date = dateInput;
-  }
-
-  if (!isValid(date)) {
-    throw new Error("Invalid date");
-  }
-
+export function formatDate(date: Date) {
   return format(date, "LLL dd, y");
 }
+
 
 export function extractSegmentURL(path: string) {
   if (!path) return "";
