@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { format } from "date-fns";
+import { format, parseISO, isValid } from "date-fns";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -10,7 +10,20 @@ export function wait(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export function formatDate(date: Date) {
+
+export function formatDate(dateInput: string | Date): string {
+  let date: Date;
+
+  if (typeof dateInput === 'string') {
+    date = parseISO(dateInput);
+  } else {
+    date = dateInput;
+  }
+
+  if (!isValid(date)) {
+    throw new Error("Invalid date");
+  }
+
   return format(date, "LLL dd, y");
 }
 

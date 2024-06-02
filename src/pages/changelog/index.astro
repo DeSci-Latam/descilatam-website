@@ -13,7 +13,7 @@ posts.sort((a, b) => +b.data.date - +a.data.date);
   <section class="container max-w-screen-lg space-y-6 pt-12">
     <PageHeader
       heading="Changelog"
-      text="Reproduce Astro Starlog template with Tailwind CSS & shadcn/ui."
+      text="Sigue Nuestro Progreso y Descubre Nuestras Últimas Novedades"
     />
 
     <ul class="pt-6">
@@ -41,9 +41,11 @@ posts.sort((a, b) => +b.data.date - +a.data.date);
             </div>
 
             <div class="prose dark:prose-invert prose-img:rounded-3xl max-w-none w-full pb-24">
-              {post.render().then(({ Content }) => (
+            
+             {post.render().then(({ Content }) => (
                 <Content />
-              ))}
+              ))}                             
+
             </div>
           </li>
         ))
