@@ -16,10 +16,10 @@ export async function getStaticPaths() {
 }
 
 type Props = CollectionEntry<"funding">;
+
 const post = Astro.props;
 const { lang } = Astro.params;
 const { Content } = await post.render();
-const { title, description, date, cover } = post.data;
 const toc = await getTableOfContents(post.body);
 
 if (!post) {
@@ -30,6 +30,10 @@ if (!post) {
 }
 ---
 
-<FundingPostLayout {...post.data} toc={toc}>
+<FundingPostLayout
+  data={post.data}
+  slug={post.slug}
+  toc={toc}
+>
   <Content components={MdxComponents} />
 </FundingPostLayout>

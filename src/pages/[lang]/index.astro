@@ -1602,17 +1602,26 @@ const supporters = [
 
 <script>
   function ml_webform_success_19061547() {
+    const successUrl = "https://descilatam.org/newslatter-succes";
+    
     try {
-      window.top.location.href = "https://descilatam.org/newslatter-succes";
+      // Verificar si window.top está disponible y no es null
+      if (window.top && window.top !== window) {
+        window.top.location.href = successUrl;
+      } else {
+        window.location.href = successUrl;
+      }
     } catch (e) {
-      window.location.href = "https://descilatam.org/newslatter-succes";
+      // Si hay algún error (ej: acceso denegado por política de mismo origen)
+      window.location.href = successUrl;
     }
   }
 </script>
 
 <script
   src="https://groot.mailerlite.com/js/w/webforms.min.js?v2d8fb22bb5b3677f161552cd9e774127"
-  type="text/javascript"></script>
+  type="text/javascript"
+></script>
 <script>
   fetch(
     "https://assets.mailerlite.com/jsonp/1150335/forms/135668232739620393/takel"

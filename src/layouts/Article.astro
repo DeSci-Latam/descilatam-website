@@ -10,21 +10,40 @@ import { buttonVariants } from "@/components/ui/button";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
-
-
 interface Props {
   title?: string;
   description?: string;
-  frontmatter?: undefined;
+  frontmatter?: {
+    title: string;
+    description: string;
+    pubDate: string;
+    updatedDate?: string;
+    cover?: string;
+    slug: string;
+    category?: string;
+  };
+  slug?: string;
+  pubDate?: string;
+  updatedDate?: string;
+  cover?: string;
+  category?: string;
 }
-const slug = Astro.props.slug;
-const {  title, description, pubDate, updatedDate, cover } = Astro.props.frontmatter || Astro.props;
+
+const { 
+  frontmatter,
+  slug = frontmatter?.slug,
+  title = frontmatter?.title, 
+  description = frontmatter?.description,
+  pubDate = frontmatter?.pubDate,
+  updatedDate = frontmatter?.updatedDate,
+  cover = frontmatter?.cover,
+  category = frontmatter?.category
+} = Astro.props;
 ---
  <!--  <BaseHead   /> -->
   <!-- <Layout /> -->
 
 <Layout title={title} description={description}>
-
   <div class="relative container max-w-screen-md ">
     <div class="">
     <button
@@ -87,8 +106,8 @@ const {  title, description, pubDate, updatedDate, cover } = Astro.props.frontma
     <slot />
   </article>
 </Base> -->
-<!-- 
-<style>
+
+<!-- <style>
   article {
     > * {
       margin-block: 1.2em 0;
@@ -303,5 +322,4 @@ const {  title, description, pubDate, updatedDate, cover } = Astro.props.frontma
       }
     }
   }
-</style>
- -->
+</style> -->

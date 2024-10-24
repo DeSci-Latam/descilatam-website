@@ -7,7 +7,6 @@ import { formatDate } from "@/lib/utils";
 
 export async function getStaticPaths() {
   const posts = await getCollection("changelog");
-
   return posts.map((post) => {
     const [lang, ...slug] = post.slug.split("/");
     return { params: { lang, slug: slug.join("/") || undefined }, props: post };
@@ -17,9 +16,17 @@ export async function getStaticPaths() {
 const locale = Astro.currentLocale as Lang;
 const t = useTranslations(locale);
 const post = Astro.props;
-
 const { Content } = await post.render();
 const title = `${t("changelog")} - ${post.data.versionNumber}`;
+
+// Función helper para formatear la fecha con el locale
+function formatLocalDate(date: Date, locale: string) {
+  return date.toLocaleDateString(locale, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
 ---
 
 <Base {title}>
@@ -36,12 +43,11 @@ const title = `${t("changelog")} - ${post.data.versionNumber}`;
               {post.data.versionNumber}
             </Badge>
             <span class="text-sm text-muted-foreground">
-              {formatDate(post.data.date, locale)}
+              {formatLocalDate(post.data.date, locale)}
             </span>
           </div>
         </div>
       </div>
-
       <div class="prose dark:prose-invert prose-img:rounded-3xl max-w-none w-full pb-24">
         <Content />
       </div>

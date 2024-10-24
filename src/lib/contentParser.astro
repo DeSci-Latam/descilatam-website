@@ -5,12 +5,27 @@ import {
   type CollectionKey,
 } from "astro:content";
 
+// Tipado auxiliar para verificar si un objeto tiene la propiedad draft
+type HasDraft = { draft?: boolean };
+
 export const getSinglePage = async <C extends CollectionKey>(
   collectionName: C,
 ): Promise<CollectionEntry<C>[]> => {
   const allPages = await getCollection(collectionName);
+  
+  // Filtrar páginas que no empiezan con guion
   const removeIndex = allPages.filter((data) => data.id.match(/^(?!-)/));
-  const removeDrafts = removeIndex.filter((data) => !data.data.draft);
+  
+  // Filtrar borradores, solo si la colección tiene la propiedad draft
+  const removeDrafts = removeIndex.filter((data) => {
+    // Verificar si data.data tiene la propiedad draft
+    if ('draft' in data.data) {
+      return !(data.data as HasDraft).draft;
+    }
+    // Si no tiene la propiedad draft, mantener la página
+    return true;
+  });
+
   return removeDrafts;
 };
 ---

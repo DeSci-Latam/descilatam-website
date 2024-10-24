@@ -6,6 +6,8 @@ import PageHeadline from "@/components/PageHeadline";
 import { Badge } from "@/components/ui/badge";
 import CategoryFilter from "@/components/filters/CategoryFilter";
 import { getCategories, filterPostsByCategory } from "@/utils/post";
+import type { ImageMetadata } from 'astro';
+import defaultCover from "@/assets/images/default-cover.jpg"; // Asegúrate de tener esta imagen
 
 export async function getStaticPaths() {
   const paths = await Promise.all(
@@ -16,50 +18,79 @@ export async function getStaticPaths() {
       }));
     })
   );
-
   return paths.flat();
 }
 
 const { lang, category } = Astro.params;
 const locale = lang as Lang;
 const t = useTranslations(locale);
-
 const posts = await filterPostsByCategory(category as string, locale);
-
 const title = t({
   es: `Blog - ${category}`,
   en: `Blog - ${category}`,
   pt: `Blog - ${category}`,
 });
 
+// Función auxiliar para manejar las imágenes
+const getImageSrc = async (cover: string | ImageMetadata | null | undefined) => {
+  if (!cover) return defaultCover;
+  
+  if (typeof cover === 'string') {
+    try {
+      // Si la imagen es una ruta local, intentamos importarla
+      if (cover.startsWith('/') || cover.startsWith('./') || cover.startsWith('../')) {
+        const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,png,gif,webp}');
+        const image = await images[cover]?.();
+        return image?.default || defaultCover;
+      }
+      // Si es una URL externa, la devolvemos como string
+      return cover;
+    } catch {
+      return defaultCover;
+    }
+  }
+  
+  return cover;
+};
 ---
 
 <Layout title={title}>
   <section class="container py-10 pt-28 h-screen">
     <PageHeadline title={title} />
-
     <CategoryFilter locale={locale} category={category} />
-
     <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-9 md:gap-y-11 lg:gap-y-16 lg:gap-x-8">
-      {posts.map((post) => {
+      {posts.map(async (post) => {
         const [, ...slug] = post.slug.split("/");
+        const coverImage = await getImageSrc(post.data.cover);
+        
         return (
           <article class="group space-y-4">
             <a
               href={`/${locale}/blog/${slug.join("/")}/`}
               class="flex h-52 group-hover:-translate-y-2 group-hover:shadow-xl transition duration-300"
             >
-              <Image
-                loading="eager"
-                class="w-full h-full object-cover rounded-xl overflow-hidden"
-                width={720}
-                height={360}
-                src={post.data.cover}
-                alt={post.data.title}
-                transition:name={`img-${post.slug}`}
-              />
+              {typeof coverImage === 'string' ? (
+                // Para URLs externas
+                <img
+                  class="w-full h-full object-cover rounded-xl overflow-hidden"
+                  width={720}
+                  height={360}
+                  src={coverImage}
+                  alt={post.data.title}
+                  transition:name={`img-${post.slug}`}
+                />
+              ) : (
+                // Para imágenes locales
+                <Image
+                  src={coverImage}
+                  width={720}
+                  height={360}
+                  alt={post.data.title}
+                  class="w-full h-full object-cover rounded-xl overflow-hidden"
+                  transition:name={`img-${post.slug}`}
+                />
+              )}
             </a>
-
             <div class="flex items-center justify-between">
               <Badge radius="md" className="capitalize">
                 {post.data.category}
@@ -75,7 +106,6 @@ const title = t({
                 })}
               </span>
             </div>
-
             <div>
               <a href={`/${locale}/blog/${slug.join("/")}/`} class="group-hover:underline">
                 <h2

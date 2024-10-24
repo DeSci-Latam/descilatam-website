@@ -150,7 +150,7 @@ const isActive = (path: string) =>
 
           <nav class="flex items-center ml-8 space-x-6">
             <!-- Comunidad Dropdown -->
-            <div class="dropdown dropdown-hover">
+            <div class="dropdown dropdown-end dropdown-hover">
               <div tabindex={0} role="button" class="menu-button">
                 <span>{t({ es: "Comunidad", en: "Community", pt: "Communidade" })}</span>
                 <svg 
@@ -173,7 +173,7 @@ const isActive = (path: string) =>
             </div>
 
             <!-- Ecosistema Dropdown -->
-            <div class="dropdown dropdown-hover">
+            <div class="dropdown dropdown-end dropdown-hover">
               <div tabindex={0} role="button" class="menu-button">
                 <span>{t({ es: "Ecosistema", en: "Ecosystem", pt: "Ecosistema" })}</span>
                 <svg 
@@ -186,7 +186,7 @@ const isActive = (path: string) =>
                   <path d="M6 9l6 6 6-6"/>
                 </svg>
               </div>
-              <ul tabindex={0} class="dropdown-content z-[1] menu p-2 shadow-lg bg-[#0F1115] border border-gray-800 rounded-box w-52">
+              <ul tabindex={0} class="dropdown-content dropdown-end z-[1] menu p-2 shadow-lg bg-[#0F1115] border border-gray-800 rounded-box w-52">
                 <li>
                   <a href={getRelativeLocaleUrl(locale, "/ecosystem/funding/")} class="text-gray-300 hover:text-white">
                     {t({ es: "Financiamiento", en: "Funding", pt: "Financiamento" })}

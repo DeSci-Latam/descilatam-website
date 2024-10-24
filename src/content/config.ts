@@ -84,7 +84,9 @@ const funding = defineCollection({
       date: z.coerce.date(),
       type: z.string(),
       tags: z.array(z.string()),
+      category: z.enum(CATEGORIES),
       description: z.string(),
+      draft: z.boolean().default(false),
       cover: image()
         .refine((img) => img.width >= 600, {
           message: "cover must be at least 600px wide",
