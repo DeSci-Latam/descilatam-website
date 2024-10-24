@@ -1,0 +1,50 @@
+---
+import { LOCALES, useTranslations, type Lang } from "@/i18n";
+import Base from "@/layouts/Base";
+import { getCollection } from "astro:content";
+import { Badge } from "@/components/ui/badge";
+import { formatDate } from "@/lib/utils";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("changelog");
+
+  return posts.map((post) => {
+    const [lang, ...slug] = post.slug.split("/");
+    return { params: { lang, slug: slug.join("/") || undefined }, props: post };
+  });
+}
+
+const locale = Astro.currentLocale as Lang;
+const t = useTranslations(locale);
+const post = Astro.props;
+
+const { Content } = await post.render();
+const title = `${t("changelog")} - ${post.data.versionNumber}`;
+---
+
+<Base {title}>
+  <section class="container max-w-screen-lg space-y-6 pt-12">
+    <div class="flex flex-col max-md:gap-y-4 md:flex-row w-full">
+      <div class="md:basis-32 lg:basis-56 shrink-0 grow-0">
+        <div class="md:sticky md:top-24 w-auto mr-6">
+          <div class="flex flex-col gap-y-2 pb-4">
+            <Badge
+              variant="default"
+              radius="lg"
+              className="w-14 h-7 justify-center text-md bg_release_version text-white"
+            >
+              {post.data.versionNumber}
+            </Badge>
+            <span class="text-sm text-muted-foreground">
+              {formatDate(post.data.date, locale)}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prose dark:prose-invert prose-img:rounded-3xl max-w-none w-full pb-24">
+        <Content />
+      </div>
+    </div>
+  </section>
+</Base>

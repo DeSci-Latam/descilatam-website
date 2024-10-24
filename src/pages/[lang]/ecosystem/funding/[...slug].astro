@@ -1,0 +1,35 @@
+---
+import { MdxComponents } from "@/components/content/mdx-components";
+import FundingPostLayout from "@/layouts/funding-post";
+import { getCollection, type CollectionEntry } from "astro:content";
+import { getTableOfContents } from "@/lib/toc";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("funding");
+  return posts.map((post) => {
+    const [lang, ...slugParts] = post.slug.split("/");
+    return {
+      params: { lang, slug: slugParts.join("/") },
+      props: post,
+    };
+  });
+}
+
+type Props = CollectionEntry<"funding">;
+const post = Astro.props;
+const { lang } = Astro.params;
+const { Content } = await post.render();
+const { title, description, date, cover } = post.data;
+const toc = await getTableOfContents(post.body);
+
+if (!post) {
+  return new Response(null, {
+    status: 404,
+    statusText: "Not found",
+  });
+}
+---
+
+<FundingPostLayout {...post.data} toc={toc}>
+  <Content components={MdxComponents} />
+</FundingPostLayout>
